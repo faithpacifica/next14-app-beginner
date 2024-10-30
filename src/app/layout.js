@@ -16,10 +16,12 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<Suspense fallback={<Loading/>}>
-					<Navbar />
-					{children}
-					<Footer />
+				<Suspense fallback={<Loading />}>
+					<div className="container">
+						<Navbar />
+						{children}
+						<Footer />
+					</div>
 				</Suspense>
 			</body>
 		</html>
